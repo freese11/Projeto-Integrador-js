@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="logo2">
+        <h1>Crie sua conta</h1>
+      </div>
+      <p>Digite os seus dados para o cadastro</p>
+      <br>
+      <input type="text" id="nome" placeholder="Nome de usuário" />
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="senha" placeholder="Senha" />
+      <input type="tel" id="numero" placeholder="Telefone" />
+
+      <button id="btn-add">Cadastrar</button>
+
+      <p>
+        Já tem conta?
+        <a href="#" onclick="window.close(); return false;">Voltar</a>
+      </p>
+    </div>
+
+    <script src="cadastro.js"></script>
+
+    <style>
+      input {
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        padding-left: 40px;
+        height: 40px;
+        width: 100%;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 15px;
+      }
+
+      #email {
+        background-image: url("https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mail.svg");
+      }
+
+      #senha {
+        background-image: url("https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lock.svg");
+      }
+      #nome {
+        background-image: url("https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-round.svg");
+      }
+      #numero {
+        background-image: url("https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/phone.svg");
+      }
+    </style>
+  </body>
+</html>

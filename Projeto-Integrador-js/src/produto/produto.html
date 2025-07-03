@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Produtos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="produto.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Informações de Produtos</h1>
+  </header>
+
+  <p id="mensagem"></p>
+
+  <div class="container-lateral">
+    <!-- Tabela de Produtos -->
+    <table id="produtoTable">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>Tipo</th>
+          <th>Valor</th>
+          <th>Marca</th>
+          <th>Estoque</th>
+          <th>Cor</th>
+          <th>Ativo/Inativo</th>
+          <th>Tamanho</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaTableDados"></tbody>
+    </table>
+
+    <!-- Modal de Produto -->
+    <div id="modal">
+      <button id="btn-limpar">
+        <i data-lucide="shield-check"></i> adicionar novo produto   
+      </button>
+
+      <h3>Editar Produto</h3>
+
+      <label for="ModalCodproduto">Código do Produto:</label>
+      <input type="text" id="ModalCodproduto" readonly />
+      <br /><br />
+
+      <label for="ModalMarca">Marca:</label>
+      <input type="text" id="ModalMarca" />
+      <br /><br />
+
+      <label for="ModalValor">Valor:</label>
+      <input type="number" id="ModalValor" step="0.01" />
+      <br /><br />
+
+      <label for="ModalEstoque">Estoque:</label>
+      <input type="number" id="ModalEstoque" />
+      <br /><br />
+
+      <label for="ModalTipo">Tipo:</label>
+      <input type="text" id="ModalTipo" />
+      <br /><br />
+
+      <label for="ModalCor">Cor:</label>
+      <input type="text" id="ModalCor" />
+      <br /><br />
+
+      <label for="ModalNome">Nome:</label>
+      <input type="text" id="ModalNome" />
+      <br /><br />
+
+      <label for="ModalAtivoInativo">Ativo/Inativo:</label>
+      <select id="ModalAtivoInativo">
+        <option value="Ativo">Ativo</option>
+        <option value="Inativo">Inativo</option>
+      </select>
+      <br /><br />
+
+      <label for="ModalTamanho">Tamanho:</label>
+      <input type="text" id="ModalTamanho" />
+      <br /><br />
+
+      <button id="btn-salvar"><i data-lucide="save"></i></button>
+      <button id="btn-excluir"><i data-lucide="trash-2"></i></button>
+    </div>
+  </div>
+
+  <script src="produto.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+
+</html>

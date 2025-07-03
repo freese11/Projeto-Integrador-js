@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="logo-container">
+        <i data-lucide="box" id="logo-icon"></i>
+        <h1>FreeseSalesSystem</h1>
+      </div>
+    <div> 
+        <p>Bem-vindo ao sistema de gerenciamento de vendas!</p>
+        <p>Você está logado como:</p>
+        <h3 id="nomeUsuario"></h3>
+    </div>
+
+    <button onclick="window.api.abrirVenda()">
+        Cadastro de venda
+    </button>
+    <button onclick="window.api.abrirProduto()">
+        Cadastro de produto
+    </button>
+    <button onclick="window.api.abrirCliente()">
+        Cadastro de cliente
+    </button>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

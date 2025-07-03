@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Clientes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="cliente.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Informações de Clientes</h1>
+  </header>
+
+  <p id="mensagem"></p>
+
+  <div class="container-lateral">
+    <!-- Tabela de Clientes -->
+    <table id="clienteTable">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaTableDados"></tbody>
+    </table>
+
+    <!-- Modal de Cliente -->
+    <div id="modal">
+      <button id="btn-limpar">
+        <i data-lucide="shield-check"></i> adicionar novo cliente
+
+      </button>
+
+      <h3>Editar Cliente</h3>
+
+      <label for="ModalCodcliente">Código do Cliente:</label>
+      <input type="text" id="ModalCodcliente" readonly />
+      <br /><br />
+
+      <label for="ModalNome">Nome:</label>
+      <input type="text" id="ModalNome" />
+      <br /><br />
+
+      <label for="ModalEmail">Email:</label>
+      <input type="email" id="ModalEmail" />
+      <br /><br />
+
+      <label for="ModalTelefone">Telefone:</label>
+      <input type="tel" id="ModalTelefone" />
+      <br /><br />
+
+      <button id="btn-salvar"><i data-lucide="save"></i></button>
+      <button id="btn-excluir"><i data-lucide="trash-2"></i></button>
+    </div>
+  </div>
+
+  <script src="cliente.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+
+</html>
